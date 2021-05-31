@@ -68,3 +68,10 @@ resource "aws_subnet" "private-subnet-3" {
     Name = "Private-Subnet-3"
   }
 }
+
+resource "aws_route_table" "public-route-table" {
+  vpc_id = "${aws_vpc.prodction_vpc.id}"
+  tags = {
+    Name = "Public-Route-Table"
+  }
+}
