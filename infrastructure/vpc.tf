@@ -75,3 +75,10 @@ resource "aws_route_table" "public-route-table" {
     Name = "Public-Route-Table"
   }
 }
+
+resource "aws_route_table" "private-route-table" {
+  vpc_id = "${aws_vpc.prodction_vpc.id}"
+  tags = {
+    Name = "Private-Route-Table"
+  }
+}
