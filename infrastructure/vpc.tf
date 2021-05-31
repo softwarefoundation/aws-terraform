@@ -84,33 +84,33 @@ resource "aws_route_table" "private-route-table" {
 }
 
 resource "aws_route_table_association" "public-route-table-1-association" {
-  vpc_id          = "${aws_route_table.public-route-table.id}"
-  route_table_id  = "${aws_subnet.public-subnet-1}"
+  route_table_id  = "${aws_route_table.public-route-table.id}"
+  subnet_id       = "${aws_subnet.public-subnet-1.id}"
 }
 
 resource "aws_route_table_association" "public-route-table-2-association" {
-  vpc_id          = "${aws_route_table.public-route-table.id}"
-  route_table_id  = "${aws_subnet.public-subnet-2}"
+  route_table_id  = "${aws_route_table.public-route-table.id}"
+  subnet_id       = "${aws_subnet.public-subnet-2.id}"
 }
 
 resource "aws_route_table_association" "public-route-table-3-association" {
-  vpc_id          = "${aws_route_table.public-route-table.id}"
-  route_table_id  = "${aws_subnet.public-subnet-3}"
+  route_table_id  = "${aws_route_table.public-route-table.id}"
+  subnet_id       = "${aws_subnet.public-subnet-3.id}"
 }
 
 resource "aws_route_table_association" "private-route-table-1-association" {
-  vpc_id          = "${aws_route_table.private-route-table.id}"
-  route_table_id  = "${aws_subnet.private-subnet-1}"
+  route_table_id  = "${aws_route_table.private-route-table.id}"
+  subnet_id       = "${aws_subnet.private-subnet-1.id}"
 }
 
 resource "aws_route_table_association" "private-route-table-2-association" {
-  vpc_id          = "${aws_route_table.private-route-table.id}"
-  route_table_id  = "${aws_subnet.private-subnet-2}"
+  route_table_id  = "${aws_route_table.private-route-table.id}"
+  subnet_id       = "${aws_subnet.private-subnet-2.id}"
 }
 
 resource "aws_route_table_association" "private-route-table-3-association" {
-  vpc_id          = "${aws_route_table.private-route-table.id}"
-  route_table_id  = "${aws_subnet.private-subnet-3}"
+  route_table_id  = "${aws_route_table.private-route-table.id}"
+  subnet_id       = "${aws_subnet.private-subnet-3.id}"
 }
 
 resource "aws_eip" "elastic-ip-for-nat-gw" {
