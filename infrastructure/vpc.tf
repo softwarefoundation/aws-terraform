@@ -82,3 +82,33 @@ resource "aws_route_table" "private-route-table" {
     Name = "Private-Route-Table"
   }
 }
+
+resource "aws_route_table_association" "public-route-table-1-association" {
+  vpc_id          = "${aws_route_table.public-route-table.id}"
+  route_table_id  = "${aws_subnet.public-subnet-1}"
+}
+
+resource "aws_route_table_association" "public-route-table-2-association" {
+  vpc_id          = "${aws_route_table.public-route-table.id}"
+  route_table_id  = "${aws_subnet.public-subnet-2}"
+}
+
+resource "aws_route_table_association" "public-route-table-3-association" {
+  vpc_id          = "${aws_route_table.public-route-table.id}"
+  route_table_id  = "${aws_subnet.public-subnet-3}"
+}
+
+resource "aws_route_table_association" "private-route-table-1-association" {
+  vpc_id          = "${aws_route_table.private-route-table.id}"
+  route_table_id  = "${aws_subnet.private-subnet-1}"
+}
+
+resource "aws_route_table_association" "private-route-table-2-association" {
+  vpc_id          = "${aws_route_table.private-route-table.id}"
+  route_table_id  = "${aws_subnet.private-subnet-2}"
+}
+
+resource "aws_route_table_association" "private-route-table-3-association" {
+  vpc_id          = "${aws_route_table.private-route-table.id}"
+  route_table_id  = "${aws_subnet.private-subnet-3}"
+}
