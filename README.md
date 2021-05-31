@@ -10,3 +10,14 @@ Learn Terraform with AWS, infrastructure-as-code! Develop Scalable, Highly-Avail
 1. You'll be confident to work with AWS using Terraform for any kind of AWS Resource on VPC and EC2 Instances!
 1. You'll learn how to read and code against an Terraform HCL language!
 1. You'll be able to launch your own infrastructure on AWS without even signing-in to AWS!
+
+
+## Comandos para execução
+
+```
+terraform init -backend-config="infrastructure.prod.config"
+```
+
+```
+terraform plan -var-file=production.tfvars
+```
