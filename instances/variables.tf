@@ -10,3 +10,12 @@ variable "remote_state_bucket" {
 variable "terraform_state_key" {
   description = "Key name for layer 1 remote state"
 }
+
+variable "ec2_instance_type" {
+  description = "EC2 Instance type to launch"
+}
+
+variable "key_par_name" {
+  default     = "MyEC2Keypair"
+  description = "Keypair to use connect to EC2 Instances"
+}
